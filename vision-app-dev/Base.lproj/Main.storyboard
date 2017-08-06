@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,28 +23,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2h-Zl-frm">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p2h-Zl-frm">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.65958954015544036" blue="0.18341738761466508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30Y-lK-9tK">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ylR-ol-QeK" customClass="RoundedShadowImageView" customModule="vision_app_dev" customModuleProvider="target">
-                                        <rect key="frame" x="267" y="497" width="100" height="162"/>
+                                        <rect key="frame" x="267" y="477" width="100" height="162"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="Zms-T3-SnQ"/>
-                                            <constraint firstAttribute="height" constant="162" id="uz5-tn-2rn"/>
+                                            <constraint firstAttribute="height" constant="162" id="IpN-aG-HqW"/>
+                                            <constraint firstAttribute="width" constant="100" id="J4t-vw-q1a"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="SQ2-1f-wHz"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="162" id="t7c-9Q-DBs"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uD0-pc-P2A" customClass="RoundedShadowButton" customModule="vision_app_dev" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="629" width="120" height="30"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="7fs-By-40L"/>
-                                        </constraints>
-                                        <state key="normal" title="FLASH OFF">
-                                            <color key="titleColor" red="0.65958954020000005" green="0.075576746469999997" blue="0.05045238321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Llz-Rg-ELe" customClass="RoundedShadowView" customModule="vision_app_dev" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="30" width="359" height="60"/>
+                                        <rect key="frame" x="8" y="8" width="359" height="60"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gnU-gq-ez2">
                                                 <rect key="frame" x="8" y="8" width="343" height="44"/>
@@ -65,31 +63,41 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="gnU-gq-ez2" secondAttribute="trailing" constant="8" id="7Nm-NC-Z9T"/>
-                                            <constraint firstItem="gnU-gq-ez2" firstAttribute="leading" secondItem="Llz-Rg-ELe" secondAttribute="leading" constant="8" id="9zx-zM-Xz0"/>
-                                            <constraint firstAttribute="bottom" secondItem="gnU-gq-ez2" secondAttribute="bottom" constant="8" id="Ogw-bO-m0a"/>
-                                            <constraint firstItem="gnU-gq-ez2" firstAttribute="top" secondItem="Llz-Rg-ELe" secondAttribute="top" constant="8" id="U8L-q6-rmv"/>
+                                            <constraint firstItem="gnU-gq-ez2" firstAttribute="leading" secondItem="Llz-Rg-ELe" secondAttribute="leading" constant="8" id="CoY-uh-G4D"/>
+                                            <constraint firstAttribute="bottom" secondItem="gnU-gq-ez2" secondAttribute="bottom" constant="8" id="WPq-7N-YHv"/>
+                                            <constraint firstAttribute="trailing" secondItem="gnU-gq-ez2" secondAttribute="trailing" constant="8" id="d10-Xf-08v"/>
+                                            <constraint firstItem="gnU-gq-ez2" firstAttribute="top" secondItem="Llz-Rg-ELe" secondAttribute="top" constant="8" id="hay-mi-seV"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uD0-pc-P2A" customClass="RoundedShadowButton" customModule="vision_app_dev" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="609" width="120" height="30"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="ZfT-DH-hXJ"/>
+                                            <constraint firstAttribute="height" constant="30" id="nKx-Un-hse"/>
+                                        </constraints>
+                                        <state key="normal" title="FLASH OFF">
+                                            <color key="titleColor" red="0.65958954020000005" green="0.075576746469999997" blue="0.05045238321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.65958954015544036" blue="0.18341738761466508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Llz-Rg-ELe" firstAttribute="leading" secondItem="p2h-Zl-frm" secondAttribute="leading" constant="8" id="PvB-Xz-TAb"/>
-                                    <constraint firstItem="uD0-pc-P2A" firstAttribute="leading" secondItem="p2h-Zl-frm" secondAttribute="leading" constant="8" id="Yy8-Zi-IvM"/>
-                                    <constraint firstAttribute="trailing" secondItem="ylR-ol-QeK" secondAttribute="trailing" constant="8" id="Z0B-fG-TZQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="uD0-pc-P2A" secondAttribute="bottom" constant="8" id="afg-l2-8Xk"/>
-                                    <constraint firstAttribute="trailing" secondItem="Llz-Rg-ELe" secondAttribute="trailing" constant="8" id="bnb-LM-HTq"/>
-                                    <constraint firstAttribute="bottom" secondItem="ylR-ol-QeK" secondAttribute="bottom" constant="8" id="npL-Pp-CM7"/>
-                                    <constraint firstItem="Llz-Rg-ELe" firstAttribute="top" secondItem="p2h-Zl-frm" secondAttribute="top" constant="30" id="pbG-7f-RXE"/>
+                                    <constraint firstItem="uD0-pc-P2A" firstAttribute="leading" secondItem="30Y-lK-9tK" secondAttribute="leading" constant="8" id="8Q2-ZG-MRo"/>
+                                    <constraint firstAttribute="trailing" secondItem="Llz-Rg-ELe" secondAttribute="trailing" constant="8" id="LUI-MX-9ID"/>
+                                    <constraint firstItem="Llz-Rg-ELe" firstAttribute="leading" secondItem="30Y-lK-9tK" secondAttribute="leading" constant="8" id="OF7-7T-FbJ"/>
+                                    <constraint firstItem="ylR-ol-QeK" firstAttribute="bottom" secondItem="uD0-pc-P2A" secondAttribute="bottom" id="Rwt-c1-ftx"/>
+                                    <constraint firstItem="ylR-ol-QeK" firstAttribute="trailing" secondItem="Llz-Rg-ELe" secondAttribute="trailing" id="lbW-5Q-kTa"/>
+                                    <constraint firstAttribute="bottom" secondItem="uD0-pc-P2A" secondAttribute="bottom" constant="8" id="nnH-Lv-EWF"/>
+                                    <constraint firstItem="Llz-Rg-ELe" firstAttribute="top" secondItem="30Y-lK-9tK" secondAttribute="top" constant="8" id="qJX-TT-0bz"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="p2h-Zl-frm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4KV-bW-LyW"/>
-                            <constraint firstItem="p2h-Zl-frm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="H13-s7-U7a"/>
-                            <constraint firstItem="p2h-Zl-frm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Wze-WY-KdA"/>
-                            <constraint firstItem="p2h-Zl-frm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gc9-cV-51M"/>
+                            <constraint firstItem="30Y-lK-9tK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1XJ-fb-mXO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="30Y-lK-9tK" secondAttribute="trailing" id="Odj-Y9-VSj"/>
+                            <constraint firstItem="30Y-lK-9tK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PlX-vd-tkA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="30Y-lK-9tK" secondAttribute="bottom" id="Z8V-Eb-5o1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
