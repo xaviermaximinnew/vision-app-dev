@@ -8,18 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CameraVC: UIViewController {
 
+    @IBOutlet weak var identificationLbl: UILabel!
+    @IBOutlet weak var confidenceLbl: UILabel!
+    @IBOutlet weak var captureImageView: UIImageView!
+    @IBOutlet weak var cameraView: UIView!
+    @IBOutlet weak var flashOffButton: UIButton!
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
+    
+    
 
 }
 
